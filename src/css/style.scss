@@ -73,7 +73,7 @@ form{
         border: 2px solid #f1f1f1;
         &:active{
             background-color: #7e7e7e;
-            transform: scale(.95);
+            @media (max-width: 600px) { transform: scale(.95) }
         }
         @media (max-width: 600px) { padding: 5px 0 }
     }

@@ -81,7 +81,11 @@ form button {
 }
 form button:active {
   background-color: #7e7e7e;
-  transform: scale(0.95);
+}
+@media (max-width: 600px) {
+  form button:active {
+    transform: scale(0.95);
+  }
 }
 @media (max-width: 600px) {
   form button {
