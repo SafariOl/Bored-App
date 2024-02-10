@@ -21,9 +21,7 @@ body{
 }
 
 h1{
-    @media (max-width: 600px){
-        font-size: 4em;
-    };
+    @media (max-width: 600px){ font-size: 4em };
     text-align: center;
     font-size: 6em;
 }
@@ -84,9 +82,7 @@ form{
     position: relative;
     width: 35vw;
     height: 60vh;
-    @media (max-width: 1000px){
-        width: 70vw;
-    };
+    @media (max-width: 1000px){ width: 70vw }
     @media (max-width: 600px){
         width: 96vw;
         height: 40vh;
@@ -104,26 +100,19 @@ form{
     margin-top: 5vh;
     display: flex;
     justify-content: center;
-    @media (max-width: 1000px){
-        flex-wrap: wrap;
-    };
+    @media (max-width: 1000px){ flex-wrap: wrap }
     gap: 5vw;
     .info-block{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: .6em;
-        @media (max-width: 600px){
-            width: 90vw;
-            h2{
-                font-size: 1.3em;
-            }
-        };
+        @media (max-width: 600px){ width: 90vw }
         h2{
             font-size: 3em;
             margin-bottom: .5em;
             text-align: center;
-            
+            @media (max-width: 600px){ font-size: 2em }   
         }
         width: 50vw;
         .info{
@@ -132,9 +121,7 @@ form{
                 text-transform: capitalize;
             }
             span{
-                @media (max-width: 600px){
-                    font-size: 1.1em;
-                };
+                @media (max-width: 600px){ font-size: 1.1em };
                 font-size: 1.5em;
                 color: #00da91;
             }

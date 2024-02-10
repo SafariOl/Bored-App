@@ -129,14 +129,16 @@ form button {
   .activity-block .info-block {
     width: 90vw;
   }
-  .activity-block .info-block h2 {
-    font-size: 1.3em;
-  }
 }
 .activity-block .info-block h2 {
   font-size: 3em;
   margin-bottom: 0.5em;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .activity-block .info-block h2 {
+    font-size: 2em;
+  }
 }
 .activity-block .info-block .info {
   display: grid;
