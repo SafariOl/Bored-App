@@ -70,10 +70,6 @@ export const Activity:FC = () => {
               <h2>{boreds.activity}</h2>
               <div className='info'>
                 <div className="paragraph">
-                  <p><span>Type:</span></p>
-                  <p>{boreds.type}</p>
-                </div>
-                <div className="paragraph">
                   <p><span>Participants:</span></p>
                   <p>{boreds.participants}</p>
                 </div>
