@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react'
+import { FC } from 'react'
 import { useAppSelector } from '../hook'
 import social from '../img/social.jpg'
 import busywork from '../img/busywork.jpg'
