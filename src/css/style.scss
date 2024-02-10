@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Protest Strike', sans-serif;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+body{
+    background: rgb(1, 22, 39);
+}
+
+.wrapper{
+    height: 100vh;
+    color: #f1f1f1;
+    padding: 1em 0;
+}
+
+h1{
+    @media (max-width: 600px){
+        font-size: 4em;
+    };
+    text-align: center;
+    font-size: 6em;
+}
+
+form{
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 600px){
+       gap: .5em;
+       button{
+        padding: 5px 0
+       }
+    };
+    label{
+        position: relative;
+        &::before{
+            content: '◀';
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translate(0, -50%);
+            color: #252323;
+            z-index: 111;
+            transition: all .2s ease;
+            transform-origin: left center;
+        }
+        &.active{
+            &::before{
+                transform: rotate(-90deg);
+                transition: all .2s ease;
+            }
+        }
+        select{
+            position: relative;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: #000;
+            margin: 0;
+            cursor: pointer;
+            width: 300px;
+            padding: .5em .3em;
+            font-size: 1.2em;
+        }
+    }
+    button{
+        width: 115px;
+        font-size: 1.2em;
+        background:transparent;
+        color: #f1f1f1;
+        border: 2px solid #f1f1f1;
+    }
+}
+
+.activitiy-image{
+    position: relative;
+    width: 35vw;
+    height: 60vh;
+    @media (max-width: 1000px){
+        width: 70vw;
+    };
+    @media (max-width: 600px){
+        width: 96vw;
+        height: 40vh;
+    };
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        object-fit: cover;
+    }
+}
+
+.activity-block{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1000px){
+        flex-wrap: wrap;
+    };
+    gap: 5vw;
+    padding: 0 2em;
+    .info-block{
+        display: flex;
+        flex-direction: column;
+        gap: .6em;
+        h2{
+            font-size: 3em;
+            margin-bottom: .5em;
+            text-align: center;
+            @media (max-width: 600px){
+                font-size: 2.2em;
+            };
+        }
+        width: 50vw;
+        .info{
+            p{
+                font-size: 1.2em;
+                text-transform: capitalize;
+            }
+            span{
+                @media (max-width: 600px){
+                    font-size: 1.3em;
+                };
+                font-size: 1.5em;
+                color: #00da91;
+            }
+            display: flex;
+            justify-content: space-around;
+            gap: 1em;
+            text-align: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .paragraph{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: .2em;
+            }
+        }
+    }
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+}
+
+
+.loading{
+    transition: all .3s ease;
+    background-color: rgb(1, 22, 39);
+    z-index: 11111;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+}
