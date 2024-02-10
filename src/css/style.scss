@@ -31,12 +31,7 @@ form{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    @media (max-width: 600px){
-       gap: .5em;
-       button{
-        padding: 5px 0
-       }
-    };
+    @media (max-width: 600px){ gap: .5em };
     label{
         position: relative;
         &::before{
@@ -74,7 +69,13 @@ form{
         font-size: 1.2em;
         background:transparent;
         color: #f1f1f1;
+        transition: all .15s ease;
         border: 2px solid #f1f1f1;
+        &:active{
+            background-color: #7e7e7e;
+            transform: scale(.95);
+        }
+        @media (max-width: 600px) { padding: 5px 0 }
     }
 }
 

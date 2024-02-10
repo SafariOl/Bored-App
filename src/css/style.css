@@ -40,9 +40,6 @@ form {
   form {
     gap: 0.5em;
   }
-  form button {
-    padding: 5px 0;
-  }
 }
 form label {
   position: relative;
@@ -79,7 +76,17 @@ form button {
   font-size: 1.2em;
   background: transparent;
   color: #f1f1f1;
+  transition: all 0.15s ease;
   border: 2px solid #f1f1f1;
+}
+form button:active {
+  background-color: #7e7e7e;
+  transform: scale(0.95);
+}
+@media (max-width: 600px) {
+  form button {
+    padding: 5px 0;
+  }
 }
 
 .activitiy-image {
