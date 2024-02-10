@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  height: 100dvh;
   color: #f1f1f1;
   padding: 1em 0;
 }
@@ -112,7 +112,6 @@ form button {
   display: flex;
   justify-content: center;
   gap: 5vw;
-  padding: 0 2em;
 }
 @media (max-width: 1000px) {
   .activity-block {
@@ -122,26 +121,30 @@ form button {
 .activity-block .info-block {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.6em;
   width: 50vw;
+}
+@media (max-width: 600px) {
+  .activity-block .info-block {
+    width: 90vw;
+  }
+  .activity-block .info-block h2 {
+    font-size: 1.3em;
+  }
 }
 .activity-block .info-block h2 {
   font-size: 3em;
   margin-bottom: 0.5em;
   text-align: center;
 }
-@media (max-width: 600px) {
-  .activity-block .info-block h2 {
-    font-size: 2.2em;
-  }
-}
 .activity-block .info-block .info {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
-  gap: 1em;
+  gap: 2em;
   text-align: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 .activity-block .info-block .info p {
   font-size: 1.2em;
@@ -153,7 +156,7 @@ form button {
 }
 @media (max-width: 600px) {
   .activity-block .info-block .info span {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 .activity-block .info-block .info .paragraph {
